@@ -5,6 +5,8 @@ use exitfailure::ExitFailure;
 use failure::ResultExt;
 use structopt::StructOpt;
 
+use grrs::find_matches;
+
 #[derive(StructOpt)]
 struct Cli {
     pattern: String,
@@ -14,14 +16,9 @@ struct Cli {
 
 fn main() -> Result<(), ExitFailure> {
     let args = Cli::from_args();
-    let path = &args.path;
-    let content = read_to_string(path).with_context(|_| format!("could not read `{:?}`", path))?;
+    let content = read_to_string(&args.path).with_context(|_| format!("could not read `{}`", args.path.display()))?;
 
-    for line in content.lines() {
-        if line.contains(&args.pattern) {
-            println!("{}", line);
-        }
-    }
+    find_matches(&content, &args.pattern, &mut std::io::stdout());
 
     Ok(())
 }

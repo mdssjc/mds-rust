@@ -1,4 +1,4 @@
-import { Universe, Cell } from 'wasm-game-of-life';
+import { Universe, Cell } from "wasm-game-of-life";
 import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 
 const CELL_SIZE = 5;
@@ -17,6 +17,7 @@ canvas.width = (CELL_SIZE + 1) * width + 1;
 const ctx = canvas.getContext('2d');
 
 const renderLoop = () => {
+  debugger;
   universe.tick();
 
   drawGrid();
@@ -40,6 +41,10 @@ const drawGrid = () => {
   }
 
   ctx.stroke();
+};
+
+const getIndex = (row, column) => {
+  return row * width + column;
 };
 
 const drawCells = () => {
@@ -68,6 +73,6 @@ const drawCells = () => {
   ctx.stroke();
 };
 
-const getIndex = (row, column) => {
-  return row * width + column;
-};
+drawGrid();
+drawCells();
+requestAnimationFrame(renderLoop);

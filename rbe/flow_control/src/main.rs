@@ -5,6 +5,7 @@ mod fc_return;
 mod fc_while;
 mod fc_for;
 mod fc_match;
+mod destructure_tuple;
 
 fn main() {
     if_else::execute();
@@ -14,4 +15,5 @@ fn main() {
     fc_while::execute();
     fc_for::execute();
     fc_match::execute();
+    destructure_tuple::execute();
 }

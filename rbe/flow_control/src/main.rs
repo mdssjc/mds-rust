@@ -7,6 +7,7 @@ mod fc_for;
 mod fc_match;
 mod destructure_tuple;
 mod destructure_enum;
+mod destructure_pointers;
 
 fn main() {
     if_else::execute();
@@ -18,4 +19,5 @@ fn main() {
     fc_match::execute();
     destructure_tuple::execute();
     destructure_enum::execute();
+    destructure_pointers::execute();
 }

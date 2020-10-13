@@ -11,6 +11,7 @@ mod destructure_pointers;
 mod destructure_structures;
 mod guard;
 mod binding;
+mod if_let;
 
 fn main() {
     if_else::execute();
@@ -26,4 +27,5 @@ fn main() {
     destructure_structures::execute();
     guard::execute();
     binding::execute();
+    if_let::execute();
 }

@@ -9,6 +9,7 @@ mod destructure_tuple;
 mod destructure_enum;
 mod destructure_pointers;
 mod destructure_structures;
+mod guard;
 
 fn main() {
     if_else::execute();
@@ -22,4 +23,5 @@ fn main() {
     destructure_enum::execute();
     destructure_pointers::execute();
     destructure_structures::execute();
+    guard::execute();
 }

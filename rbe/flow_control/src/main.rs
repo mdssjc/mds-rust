@@ -10,6 +10,7 @@ mod destructure_enum;
 mod destructure_pointers;
 mod destructure_structures;
 mod guard;
+mod binding;
 
 fn main() {
     if_else::execute();
@@ -24,4 +25,5 @@ fn main() {
     destructure_pointers::execute();
     destructure_structures::execute();
     guard::execute();
+    binding::execute();
 }

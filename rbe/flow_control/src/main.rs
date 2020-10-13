@@ -3,6 +3,7 @@ mod fc_loop;
 mod nested;
 mod fc_return;
 mod fc_while;
+mod fc_for;
 
 fn main() {
     if_else::execute();
@@ -10,4 +11,5 @@ fn main() {
     nested::execute();
     fc_return::execute();
     fc_while::execute();
+    fc_for::execute();
 }

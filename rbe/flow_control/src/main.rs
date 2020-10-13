@@ -6,6 +6,7 @@ mod fc_while;
 mod fc_for;
 mod fc_match;
 mod destructure_tuple;
+mod destructure_enum;
 
 fn main() {
     if_else::execute();
@@ -16,4 +17,5 @@ fn main() {
     fc_for::execute();
     fc_match::execute();
     destructure_tuple::execute();
+    destructure_enum::execute();
 }

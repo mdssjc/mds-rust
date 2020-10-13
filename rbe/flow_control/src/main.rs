@@ -12,6 +12,7 @@ mod destructure_structures;
 mod guard;
 mod binding;
 mod if_let;
+mod while_let;
 
 fn main() {
     if_else::execute();
@@ -28,4 +29,5 @@ fn main() {
     guard::execute();
     binding::execute();
     if_let::execute();
+    while_let::execute();
 }

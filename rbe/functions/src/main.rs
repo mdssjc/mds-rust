@@ -6,6 +6,7 @@ mod input_parameters;
 mod anonymity;
 mod input_functions;
 mod output_parameters;
+mod iter_any;
 
 fn main() {
     f_fn::execute();
@@ -16,4 +17,5 @@ fn main() {
     anonymity::execute();
     input_functions::execute();
     output_parameters::execute();
+    iter_any::execute();
 }

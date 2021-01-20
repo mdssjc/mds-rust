@@ -4,6 +4,7 @@ mod closures;
 mod capture;
 mod input_parameters;
 mod anonymity;
+mod input_functions;
 
 fn main() {
     f_fn::execute();
@@ -12,4 +13,5 @@ fn main() {
     capture::execute();
     input_parameters::execute();
     anonymity::execute();
+    input_functions::execute();
 }

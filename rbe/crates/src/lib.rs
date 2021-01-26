@@ -1,4 +1,5 @@
 // 11.1. Creating a Library
+// rustc --crate-type=lib rary.rs
 
 pub fn public_function() {
     println!("called rary's `public_function()`");

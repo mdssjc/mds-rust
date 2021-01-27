@@ -1,11 +1,12 @@
 // 13.1. dead_code
 // 13.2. Crates
 // 13.3. cfg
+// 13.3.1. Custom
 
 // This crate is a library
-// #![crate_type = "lib"]
+#![crate_type = "lib"]
 // The library is named "rary"
-// #![crate_name = "rary"]
+#![crate_name = "rary"]
 
 fn used_function() {}
 
@@ -43,6 +44,11 @@ fn are_you_on_linux() {
     println!("You are *not* running linux!");
 }
 
+#[cfg(some_condition)]
+fn conditional_function() {
+    println!("condition met!");
+}
+
 fn main() {
     used_function();
 
@@ -54,4 +60,6 @@ fn main() {
     } else {
         println!("Yes. It's definitely *not* linux!");
     }
+
+    conditional_function();
 }

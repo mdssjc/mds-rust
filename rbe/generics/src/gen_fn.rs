@@ -1,11 +1,11 @@
 // 14.1. Functions
 
+// Concrete type `A`.
 struct A;
 
-// Concrete type `A`.
+// Concrete type `S`.
 struct S(A);
 
-// Concrete type `S`.
 struct SGen<T>(T); // Generic type `SGen`.
 
 // The following functions all take ownership of the variable passed into

@@ -9,6 +9,7 @@ mod generics_where;
 mod new_types;
 mod the_problem;
 mod types;
+mod phantom;
 
 fn main() {
     generics::execute();
@@ -22,4 +23,5 @@ fn main() {
     new_types::execute();
     the_problem::execute();
     types::execute();
+    phantom::execute();
 }

@@ -7,6 +7,7 @@ mod testcase_empty;
 mod multi_bounds;
 mod generics_where;
 mod new_types;
+mod the_problem;
 
 fn main() {
     generics::execute();
@@ -18,4 +19,5 @@ fn main() {
     multi_bounds::execute();
     generics_where::execute();
     new_types::execute();
+    the_problem::execute();
 }

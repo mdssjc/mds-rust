@@ -10,6 +10,7 @@ mod new_types;
 mod the_problem;
 mod types;
 mod phantom;
+mod testcase_units;
 
 fn main() {
     generics::execute();
@@ -24,4 +25,5 @@ fn main() {
     the_problem::execute();
     types::execute();
     phantom::execute();
+    testcase_units::execute();
 }

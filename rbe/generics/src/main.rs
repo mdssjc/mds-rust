@@ -8,6 +8,7 @@ mod multi_bounds;
 mod generics_where;
 mod new_types;
 mod the_problem;
+mod types;
 
 fn main() {
     generics::execute();
@@ -20,4 +21,5 @@ fn main() {
     generics_where::execute();
     new_types::execute();
     the_problem::execute();
+    types::execute();
 }

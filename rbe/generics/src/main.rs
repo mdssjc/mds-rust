@@ -5,6 +5,7 @@ mod generics_trait;
 mod bounds;
 mod testcase_empty;
 mod multi_bounds;
+mod generics_where;
 
 fn main() {
     generics::execute();
@@ -14,4 +15,5 @@ fn main() {
     bounds::execute();
     testcase_empty::execute();
     multi_bounds::execute();
+    generics_where::execute();
 }

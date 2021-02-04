@@ -5,6 +5,7 @@ mod partial_move;
 mod borrow;
 mod borrow_mut;
 mod alias;
+mod borrow_ref;
 
 fn main() {
     raii::execute();
@@ -14,4 +15,5 @@ fn main() {
     borrow::execute();
     borrow_mut::execute();
     alias::execute();
+    borrow_ref::execute();
 }

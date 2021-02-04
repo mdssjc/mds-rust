@@ -3,6 +3,7 @@ mod scope_move;
 mod move_mut;
 mod partial_move;
 mod borrow;
+mod borrow_mut;
 
 fn main() {
     raii::execute();
@@ -10,4 +11,5 @@ fn main() {
     move_mut::execute();
     partial_move::execute();
     borrow::execute();
+    borrow_mut::execute();
 }

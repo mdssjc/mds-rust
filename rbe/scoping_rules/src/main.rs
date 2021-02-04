@@ -6,6 +6,7 @@ mod borrow;
 mod borrow_mut;
 mod alias;
 mod borrow_ref;
+mod lifetime;
 
 fn main() {
     raii::execute();
@@ -16,4 +17,5 @@ fn main() {
     borrow_mut::execute();
     alias::execute();
     borrow_ref::execute();
+    lifetime::execute();
 }

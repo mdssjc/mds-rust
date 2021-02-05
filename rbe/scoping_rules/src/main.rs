@@ -15,6 +15,7 @@ mod lifetime_trait;
 mod lifetime_bounds;
 mod lifetime_coercion;
 mod static_lifetime;
+mod elision;
 
 fn main() {
     raii::execute();
@@ -34,4 +35,5 @@ fn main() {
     lifetime_bounds::execute();
     lifetime_coercion::execute();
     static_lifetime::execute();
+    elision::execute();
 }

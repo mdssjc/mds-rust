@@ -10,6 +10,7 @@ mod lifetime;
 mod explicit;
 mod lifetime_fn;
 mod methods;
+mod lifetime_struct;
 
 fn main() {
     raii::execute();
@@ -24,4 +25,5 @@ fn main() {
     explicit::execute();
     lifetime_fn::execute();
     methods::execute();
+    lifetime_struct::execute();
 }

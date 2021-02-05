@@ -13,6 +13,7 @@ mod methods;
 mod lifetime_struct;
 mod lifetime_trait;
 mod lifetime_bounds;
+mod lifetime_coercion;
 
 fn main() {
     raii::execute();
@@ -30,4 +31,5 @@ fn main() {
     lifetime_struct::execute();
     lifetime_trait::execute();
     lifetime_bounds::execute();
+    lifetime_coercion::execute();
 }

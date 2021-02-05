@@ -8,6 +8,7 @@ mod alias;
 mod borrow_ref;
 mod lifetime;
 mod explicit;
+mod lifetime_fn;
 
 fn main() {
     raii::execute();
@@ -20,4 +21,5 @@ fn main() {
     borrow_ref::execute();
     lifetime::execute();
     explicit::execute();
+    lifetime_fn::execute();
 }

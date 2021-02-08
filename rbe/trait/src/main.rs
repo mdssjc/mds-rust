@@ -3,6 +3,7 @@ mod derive;
 mod trait_dyn;
 mod ops;
 mod drop;
+mod iter;
 
 fn main() {
     rbe_trait::execute();
@@ -10,4 +11,5 @@ fn main() {
     trait_dyn::execute();
     ops::execute();
     drop::execute();
+    iter::execute();
 }

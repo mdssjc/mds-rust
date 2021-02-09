@@ -6,6 +6,7 @@ mod drop;
 mod iter;
 mod impl_trait;
 mod clone;
+mod supertraits;
 
 fn main() {
     rbe_trait::execute();
@@ -16,4 +17,5 @@ fn main() {
     iter::execute();
     impl_trait::execute();
     clone::execute();
+    supertraits::execute();
 }

@@ -5,6 +5,7 @@ mod ops;
 mod drop;
 mod iter;
 mod impl_trait;
+mod clone;
 
 fn main() {
     rbe_trait::execute();
@@ -14,4 +15,5 @@ fn main() {
     drop::execute();
     iter::execute();
     impl_trait::execute();
+    clone::execute();
 }

@@ -3,6 +3,7 @@ mod designators;
 mod overload;
 mod repeat;
 mod dry;
+mod dsl;
 
 fn main() {
     macros::execute();
@@ -10,4 +11,5 @@ fn main() {
     overload::execute();
     repeat::execute();
     dry::execute();
+    dsl::execute();
 }

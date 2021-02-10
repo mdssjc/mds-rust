@@ -4,6 +4,7 @@ mod overload;
 mod repeat;
 mod dry;
 mod dsl;
+mod variadics;
 
 fn main() {
     macros::execute();
@@ -12,4 +13,5 @@ fn main() {
     repeat::execute();
     dry::execute();
     dsl::execute();
+    variadics::execute();
 }

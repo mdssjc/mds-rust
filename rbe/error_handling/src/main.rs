@@ -4,6 +4,7 @@ mod question_mark;
 mod map;
 mod and_then;
 mod result;
+mod result_map;
 
 fn main() {
     panic::execute();
@@ -12,4 +13,5 @@ fn main() {
     map::execute();
     and_then::execute();
     result::execute();
+    result_map::execute();
 }

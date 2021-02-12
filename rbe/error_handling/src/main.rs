@@ -5,6 +5,7 @@ mod map;
 mod and_then;
 mod result;
 mod result_map;
+mod result_alias;
 
 fn main() {
     panic::execute();
@@ -14,4 +15,5 @@ fn main() {
     and_then::execute();
     result::execute();
     result_map::execute();
+    result_alias::execute();
 }

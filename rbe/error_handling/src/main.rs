@@ -7,6 +7,7 @@ mod result;
 mod result_map;
 mod result_alias;
 mod early_returns;
+mod enter_question_mark;
 
 fn main() {
     panic::execute();
@@ -18,4 +19,5 @@ fn main() {
     result_map::execute();
     result_alias::execute();
     early_returns::execute();
+    enter_question_mark::execute();
 }

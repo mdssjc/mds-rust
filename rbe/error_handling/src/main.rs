@@ -8,6 +8,7 @@ mod result_map;
 mod result_alias;
 mod early_returns;
 mod enter_question_mark;
+mod multiple_error_types;
 
 fn main() {
     panic::execute();
@@ -20,4 +21,5 @@ fn main() {
     result_alias::execute();
     early_returns::execute();
     enter_question_mark::execute();
+    multiple_error_types::execute();
 }

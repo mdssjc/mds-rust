@@ -14,6 +14,7 @@ mod define_error_type;
 mod boxing_errors;
 mod reenter_question_mark;
 mod wrap_error;
+mod iter_result;
 
 fn main() {
     panic::execute();
@@ -32,4 +33,5 @@ fn main() {
     boxing_errors::execute();
     reenter_question_mark::execute();
     wrap_error::execute();
+    iter_result::execute();
 }

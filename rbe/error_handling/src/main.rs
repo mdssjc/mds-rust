@@ -12,6 +12,7 @@ mod multiple_error_types;
 mod option_result;
 mod define_error_type;
 mod boxing_errors;
+mod reenter_question_mark;
 
 fn main() {
     panic::execute();
@@ -28,4 +29,5 @@ fn main() {
     option_result::execute();
     define_error_type::execute();
     boxing_errors::execute();
+    reenter_question_mark::execute();
 }

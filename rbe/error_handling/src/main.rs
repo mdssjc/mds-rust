@@ -11,6 +11,7 @@ mod enter_question_mark;
 mod multiple_error_types;
 mod option_result;
 mod define_error_type;
+mod boxing_errors;
 
 fn main() {
     panic::execute();
@@ -26,4 +27,5 @@ fn main() {
     multiple_error_types::execute();
     option_result::execute();
     define_error_type::execute();
+    boxing_errors::execute();
 }

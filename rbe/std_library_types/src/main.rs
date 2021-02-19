@@ -3,6 +3,7 @@ mod vec;
 mod str;
 mod option;
 mod result;
+mod question_mark;
 
 fn main() {
     std_box::execute();
@@ -10,4 +11,5 @@ fn main() {
     str::execute();
     option::execute();
     result::execute();
+    question_mark::execute();
 }

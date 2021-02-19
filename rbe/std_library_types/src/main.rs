@@ -4,6 +4,7 @@ mod str;
 mod option;
 mod result;
 mod question_mark;
+mod panic;
 
 fn main() {
     std_box::execute();
@@ -12,4 +13,5 @@ fn main() {
     option::execute();
     result::execute();
     question_mark::execute();
+    panic::execute();
 }

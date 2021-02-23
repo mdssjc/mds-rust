@@ -6,6 +6,7 @@ mod result;
 mod question_mark;
 mod panic;
 mod hash;
+mod alt_key_types;
 
 fn main() {
     std_box::execute();
@@ -16,4 +17,5 @@ fn main() {
     question_mark::execute();
     panic::execute();
     hash::execute();
+    alt_key_types::execute();
 }

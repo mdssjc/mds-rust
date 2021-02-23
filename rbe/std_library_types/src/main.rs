@@ -5,6 +5,7 @@ mod option;
 mod result;
 mod question_mark;
 mod panic;
+mod hash;
 
 fn main() {
     std_box::execute();
@@ -14,4 +15,5 @@ fn main() {
     result::execute();
     question_mark::execute();
     panic::execute();
+    hash::execute();
 }

@@ -5,6 +5,7 @@ mod path;
 mod open;
 mod create;
 mod read_lines;
+mod process;
 
 fn main() {
     threads::execute();
@@ -14,5 +15,5 @@ fn main() {
     open::execute();
     create::execute();
     read_lines::execute();
-
+    process::execute();
 }

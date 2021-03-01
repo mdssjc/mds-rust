@@ -6,7 +6,7 @@ use std::path::Path;
 
 pub fn execute() {
     // Create a path to the desired file
-    let path = Path::new("hello.txt");
+    let path = Path::new("./hello.txt");
     let display = path.display();
 
     // Open the path in read-only mode, returns `io::Result<File>`

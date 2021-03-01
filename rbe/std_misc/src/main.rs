@@ -4,6 +4,7 @@ mod channels;
 mod path;
 mod open;
 mod create;
+mod read_lines;
 
 fn main() {
     threads::execute();
@@ -12,4 +13,6 @@ fn main() {
     path::execute();
     open::execute();
     create::execute();
+    read_lines::execute();
+
 }

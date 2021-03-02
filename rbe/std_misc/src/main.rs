@@ -8,6 +8,7 @@ mod read_lines;
 mod process;
 mod pipe;
 mod wait;
+mod fs;
 
 fn main() {
     threads::execute();
@@ -20,4 +21,5 @@ fn main() {
     process::execute();
     pipe::execute();
     wait::execute();
+    fs::execute();
 }

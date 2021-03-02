@@ -10,6 +10,7 @@ mod pipe;
 mod wait;
 mod fs;
 mod arg;
+mod matching;
 
 fn main() {
     threads::execute();
@@ -24,4 +25,5 @@ fn main() {
     wait::execute();
     fs::execute();
     arg::execute();
+    matching::execute();
 }

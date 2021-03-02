@@ -11,6 +11,7 @@ mod wait;
 mod fs;
 mod arg;
 mod matching;
+mod ffi;
 
 fn main() {
     threads::execute();
@@ -26,4 +27,5 @@ fn main() {
     fs::execute();
     arg::execute();
     matching::execute();
+    ffi::execute();
 }

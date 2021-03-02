@@ -9,6 +9,7 @@ mod process;
 mod pipe;
 mod wait;
 mod fs;
+mod arg;
 
 fn main() {
     threads::execute();
@@ -22,4 +23,5 @@ fn main() {
     pipe::execute();
     wait::execute();
     fs::execute();
+    arg::execute();
 }

@@ -1,7 +1,7 @@
 use std::path;
 
 use ggez;
-use ggez::{conf, Context, event, GameResult};
+use ggez::{conf, Context, event, GameResult, timer};
 use ggez::event::KeyCode;
 use ggez::event::KeyMods;
 use specs::{RunNow, World, WorldExt};
@@ -23,7 +23,7 @@ struct Game {
 }
 
 impl event::EventHandler for Game {
-    fn update(&mut self, _context: &mut Context) -> GameResult {
+    fn update(&mut self, context: &mut Context) -> GameResult {
         // Run input system
         {
             let mut is = InputSystem {};
@@ -34,6 +34,12 @@ impl event::EventHandler for Game {
         {
             let mut gss = GameplayStateSystem {};
             gss.run_now(&self.world);
+        }
+
+        // Get and update time resource
+        {
+            let mut time = self.world.write_resource::<Time>();
+            time.delta += timer::delta(context);
         }
 
         Ok(())

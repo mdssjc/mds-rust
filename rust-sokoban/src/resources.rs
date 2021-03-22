@@ -1,5 +1,6 @@
 use std::fmt;
 use std::fmt::Display;
+use std::time::Duration;
 
 use ggez::event::KeyCode;
 use specs::World;
@@ -13,6 +14,7 @@ pub struct InputQueue {
 pub fn register_resources(world: &mut World) {
     world.insert(InputQueue::default());
     world.insert(Gameplay::default());
+    world.insert(Time::default());
 }
 
 pub enum GameplayState {
@@ -40,4 +42,9 @@ impl Default for GameplayState {
 pub struct Gameplay {
     pub state: GameplayState,
     pub moves_count: u32
+}
+
+#[derive(Default)]
+pub struct Time {
+    pub delta: Duration,
 }

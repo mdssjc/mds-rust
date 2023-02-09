@@ -25,6 +25,7 @@ use prelude::*;
 
 struct State {
     ecs: World,
+    resources: Resources,
     systems: Schedule,
 }
 
@@ -39,6 +40,7 @@ impl State {
         resources.insert(Camera::new(map_builder.player_start));
         Self {
             ecs,
+            resources,
             systems: build_scheduler(),
         }
     }
@@ -52,6 +54,7 @@ impl GameState for State {
         ctx.cls();
         self.resources.insert(ctx.key);
         self.systems.execute(&mut self.ecs, &mut self.resources);
+        render_draw_buffer(ctx).expect("Render error");
     }
 }
 

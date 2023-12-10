@@ -5,14 +5,18 @@ use crate::prelude::*;
 #[read_component(Render)]
 #[read_component(FieldOfView)]
 #[read_component(Player)]
-pub fn entity_render(ecs: &SubWorld, #[resource] camera: &Camera) {
+pub fn entity_render(
+    #[resource] camera: &Camera,
+    ecs: &SubWorld,
+) {
     let mut renderables = <(&Point, &Render)>::query();
     let mut fov = <&FieldOfView>::query().filter(component::<Player>());
     let mut draw_batch = DrawBatch::new();
-    let player_fov = fov.iter(ecs).nth(0).unwrap();
-
     draw_batch.target(1);
     let offset = Point::new(camera.left_x, camera.top_y);
+
+    let player_fov = fov.iter(ecs).nth(0).unwrap();
+
     renderables.
         iter(ecs)
         .filter(|(pos, _)| player_fov.visible_tiles.contains(&pos))
@@ -20,9 +24,10 @@ pub fn entity_render(ecs: &SubWorld, #[resource] camera: &Camera) {
             draw_batch.set(
                 *pos - offset,
                 render.color,
-                render.glyph,
+                render.glyph
             );
         }
         );
+
     draw_batch.submit(5000).expect("Batch error");
 }

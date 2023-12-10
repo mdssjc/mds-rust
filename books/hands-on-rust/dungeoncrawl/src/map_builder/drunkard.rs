@@ -1,26 +1,25 @@
 use crate::prelude::*;
-
 use super::MapArchitect;
 
 const STAGGER_DISTANCE: usize = 400;
 const NUM_TILES: usize = (SCREEN_WIDTH * SCREEN_HEIGHT) as usize;
-const DESIRED_FLOOR: usize = NUM_TILES / 3;
+const DESIRED_FLOOR : usize = NUM_TILES / 3;
 
 pub struct DrunkardsWalkArchitect {}
 
 impl MapArchitect for DrunkardsWalkArchitect {
     fn new(&mut self, rng: &mut RandomNumberGenerator) -> MapBuilder {
-        let mut mb = MapBuilder {
-            map: Map::new(),
-            rooms: Vec::new(),
-            monster_spawns: Vec::new(),
-            player_start: Point::zero(),
-            amulet_start: Point::zero(),
-            theme: super::themes::DungeonTheme::new(),
+        let mut mb = MapBuilder{
+            map : Map::new(),
+            rooms : Vec::new(),
+            monster_spawns : Vec::new(),
+            player_start : Point::zero(),
+            amulet_start : Point::zero(),
+            theme: super::themes::DungeonTheme::new()
         };
 
         mb.fill(TileType::Wall);
-        let center = Point::new(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+        let center = Point::new(SCREEN_WIDTH /2, SCREEN_HEIGHT/2);
         self.drunkard(&center, rng, &mut mb.map);
         while mb.map.tiles.iter()
             .filter(|t| **t == TileType::Floor).count() < DESIRED_FLOOR
@@ -28,17 +27,17 @@ impl MapArchitect for DrunkardsWalkArchitect {
             self.drunkard(
                 &Point::new(
                     rng.range(0, SCREEN_WIDTH),
-                    rng.range(0, SCREEN_HEIGHT),
+                    rng.range(0, SCREEN_HEIGHT)
                 ),
                 rng,
-                &mut mb.map,
+                &mut mb.map
             );
             let dijkstra_map = DijkstraMap::new(
-                SCREEN_WIDTH,
-                SCREEN_HEIGHT,
-                &vec![mb.map.point2d_to_index(center)],
-                &mb.map,
-                1024.0,
+                                                SCREEN_WIDTH,
+                                                SCREEN_HEIGHT,
+                                                &vec![mb.map.point2d_to_index(center)],
+                                                &mb.map,
+                                                1024.0
             );
             dijkstra_map.map
                 .iter()
@@ -58,7 +57,7 @@ impl DrunkardsWalkArchitect {
         &mut self,
         start: &Point,
         rng: &mut RandomNumberGenerator,
-        map: &mut Map,
+        map: &mut Map
     ) {
         let mut drunkard_pos = start.clone();
         let mut distance_staggered = 0;
